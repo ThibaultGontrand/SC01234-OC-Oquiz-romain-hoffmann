@@ -3,12 +3,8 @@
 // Inférence : TypeScript SAIT que firstname est de type string, et plus précisement de type "John"
 const firstname = "John";
 
-type Firstname = "John";
-
 // Inférence : TS sait que lastname est de type "string"
 const lastname: string = "Doe";
-
-
 // const lastname: string = 4 // ❌ Type 'number' is not assignable to type 'string'.
 
 // Type assertion : on cast le type de cette variable manuellement
