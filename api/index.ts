@@ -1,3 +1,4 @@
+import { config } from "./config.ts";
 import express from "express";
 
 const app = express();
@@ -6,8 +7,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello from the API!" });
 });
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-  console.info(`🚀 Server started at http://localhost:${port}`);
+// Démarre un serveur
+app.listen(config.port, () => {
+  console.info(`🚀 Server started at http://localhost:${config.port}`);
 });
