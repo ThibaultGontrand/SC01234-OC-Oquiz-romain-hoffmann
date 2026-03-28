@@ -12,7 +12,6 @@
     "rewriteRelativeImportExtensions": true,  // Autoriser les imports avec l'extension .ts
     
     "strict": true,                   // Règle de syntaxe TS à respecter
-    "erasableSyntaxOnly": true,       // Utiliser uniquement la syntaxe supportées par Node.js (pas d'enum, décorateurs...)
     "verbatimModuleSyntax": true,     // Avoir les imports de type via `import type`
     
     "skipLibCheck": true              // Ne pas checker le code TS des fichier .d.ts

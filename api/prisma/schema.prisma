@@ -1,11 +1,16 @@
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
   provider = "prisma-client"
   output   = "./generated"
+}
+
+// No more "url" since Prisma 7. Add prisma.config.ts
+datasource db {
+  provider = "postgresql"
 }
 
 model User {
