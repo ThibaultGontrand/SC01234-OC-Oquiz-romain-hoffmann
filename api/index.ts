@@ -1,11 +1,5 @@
 import { config } from "./config.ts";
-import express from "express";
-
-const app = express();
-
-app.get("/", (req, res) => {
-  res.json({ message: "Hello from the API!" });
-});
+import { app } from "./src/app.ts";
 
 // Démarre un serveur
 app.listen(config.port, () => {
