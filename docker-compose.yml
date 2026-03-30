@@ -34,6 +34,17 @@ services:                    # Liste des serveurs (nos conteneurs !)
     depends_on:
       - database # On s'assure que le service "database" soit lancé avant de lancer ce service
 
+  # Service complémentaire : pour visualiser et manipuler la BDD via une interface graphique
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports: 
+      - ${ADMINER_LOCAL_PORT}:8080
+    depends_on:
+      - database
+    networks:
+      - oquiz-network
+
 networks:        # Liste des réseaux
   oquiz-network: # Nom du réseau
 
